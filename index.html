@@ -11,27 +11,27 @@
     <p class="note">Fields marked with * are required.</p>
       <form>
         <label for="name">Name: *</label>
-        <input type="text" id="name" name="name" >
+        <input type="text" id="name" name="name" pattern="[a-zA-Z]+"  required>
         <br>
 
         <label for="name">Phone Number: *</label>
-        <input type="text" id="phone" name="phone" maxlength="11">
+        <input type="text" id="phone" name="phone" pattern="^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$" maxlength="11" required>
         <br>
 
         <label for="name">Social Security #: *</label>
-        <input type="text" id="social" name="social" pattern="" minlength="10"  maxlength="10" >
+        <input type="text" id="social" name="social" pattern="^(?!000|666)(?:[0-6][0-9]{2}|7(?:[0-6][0-9]|7[0-2]))-(?!00)[0-9]{2}-(?!0000)[0-9]{4}$" minlength="11"  maxlength="11" required>
         <br>
 
         <label for="name">Company Email Address: *</label>
-        <input type="email" id="email" name="email"  >
+        <input type="email" id="email" name="email" pattern="\A[A-Z0-9+_.-]+@[A-Z0-9.-]+\Z" required >
         <br>
 
         <label for="name">Age: </label>
-        <input type="number" id="age" name="age" min="10" max="80">
+        <input type="number" id="age" name="age" min="10" max="80" >
         <br>
 
         <label for="name">ZipCode: * </label>
-        <input type="number" id="zip" name="zip" maxlength="9" >
+        <input type="number" id="zip" name="zip" maxlength="9" pattern="^[0-9]{5}(?:-[0-9]{4})?$" required>
         <br>
         
         <input type="submit" value="Submit" />
